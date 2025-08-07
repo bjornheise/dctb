@@ -9,7 +9,7 @@ def log(msg):
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print(f"[{timestamp}] {msg}")
 
-def get_token_price():
+def get_token_price(): #I'll have to fix this, it's dogshit
     try:
         r = requests.get('https://wowauction.us/classic/token')
         token_price = r.text.split('''<div class="sm:w-full md: w-1/2 text-amber-400 flex flex-row items-center">
@@ -112,3 +112,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
